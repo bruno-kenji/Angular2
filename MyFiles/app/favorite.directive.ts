@@ -1,4 +1,4 @@
-import {Directive, HostBinding} from 'angular2/core';
+import {Directive, HostBinding, Input} from 'angular2/core';
 
 // mw is a directive prefix that we created for MediaWatcher, like Angular's 'ng'.
 @Directive({
@@ -7,4 +7,8 @@ import {Directive, HostBinding} from 'angular2/core';
 
 export class FavoriteDirective {
   @HostBinding('class.is-favorite') isFavorite = true;
+  @Input()
+  set mwFavorite(value) {
+    this.isFavorite = value;
+  };
 }
