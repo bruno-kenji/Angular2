@@ -9,6 +9,10 @@ import {MediaItemComponent} from './media-item.component';
 })
 
 export class AppComponent {
+  onMediaItemDeleted(mediaItem) {
+    console.log('deleted');
+  };
+
   firstMediaItem = {
     id: 1,
     name: "Firebug",

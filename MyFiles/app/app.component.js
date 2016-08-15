@@ -33,6 +33,10 @@ System.register(['angular2/core', './media-item.component'], function(exports_1,
                         isFavorite: false
                     };
                 }
+                AppComponent.prototype.onMediaItemDeleted = function (mediaItem) {
+                    console.log('deleted');
+                };
+                ;
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'media-tracker-app',
