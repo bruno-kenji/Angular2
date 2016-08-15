@@ -29,6 +29,10 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 MediaItemComponent.prototype.onDelete = function () {
                     console.log('deleted');
                 };
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', Object)
+                ], MediaItemComponent.prototype, "mediaItem", void 0);
                 MediaItemComponent = __decorate([
                     core_1.Component({
                         selector: 'media-item',

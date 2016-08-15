@@ -23,6 +23,15 @@ System.register(['angular2/core', './media-item.component'], function(exports_1,
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.firstMediaItem = {
+                        id: 1,
+                        name: "Firebug",
+                        medium: "Series",
+                        category: "Science Fiction",
+                        year: 2010,
+                        watchedOn: 1294166565384,
+                        isFavorite: false
+                    };
                 }
                 AppComponent = __decorate([
                     core_1.Component({
