@@ -21,6 +21,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             MediaItemComponent = (function () {
                 function MediaItemComponent() {
                     this.name = 'The Redemption';
+                    this.wasWatched = true;
                 }
                 MediaItemComponent = __decorate([
                     core_1.Component({
