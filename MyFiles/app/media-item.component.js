@@ -26,6 +26,9 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     return true;
                 };
                 ;
+                MediaItemComponent.prototype.onDelete = function () {
+                    console.log('deleted');
+                };
                 MediaItemComponent = __decorate([
                     core_1.Component({
                         selector: 'media-item',
