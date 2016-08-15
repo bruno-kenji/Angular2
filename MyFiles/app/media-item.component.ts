@@ -6,7 +6,7 @@ import {Component, Input} from 'angular2/core';
     styleUrls: ['app/media-item.component.css']
 })
 export class MediaItemComponent {
-  @Input() mediaItem;
+  @Input('mediaItemToWatch') mediaItem;
   name = 'The Redemption';
 
   wasWatched() {
