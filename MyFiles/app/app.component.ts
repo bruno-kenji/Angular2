@@ -1,9 +1,9 @@
 import {Component} from 'angular2/core';
-import {MediaItemComponent} from './media-item.component';
+import {MediaItemListComponent} from './media-item-list.component';
 
 @Component({
     selector: 'media-tracker-app',
-    directives: [MediaItemComponent],
+    directives: [MediaItemListComponent],
     templateUrl: 'app/app.component.html',
     styleUrls: ['app/app.component.css']
 })
