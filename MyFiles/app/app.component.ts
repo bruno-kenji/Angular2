@@ -5,7 +5,10 @@ import {Component} from 'angular2/core';
     templateUrl: 'app/app.component.html'
     styles: [`
       h1 {
-        color: #fff
+        color: #fff;
+      }
+      .description {
+        font-style: italic;
       }
     `]
 })
