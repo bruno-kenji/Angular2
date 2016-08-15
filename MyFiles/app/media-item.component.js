@@ -20,6 +20,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             MediaItemComponent = (function () {
                 function MediaItemComponent() {
+                    this.name = 'The Redemption';
                 }
                 MediaItemComponent = __decorate([
                     core_1.Component({
