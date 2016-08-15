@@ -6,7 +6,9 @@ import {Component} from 'angular2/core';
     styles: [`
       h1 {
         color: #fff;
-      }
+      }`,
+      
+      `
       .description {
         font-style: italic;
       }
