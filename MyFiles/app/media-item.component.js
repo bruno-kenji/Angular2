@@ -24,7 +24,6 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 MediaItemComponent = __decorate([
                     core_1.Component({
                         selector: 'media-item',
-                        directives: [MediaItemComponent],
                         templateUrl: 'app/media-item.component.html',
                         styleUrls: ['app/media-item.component.css']
                     }), 
