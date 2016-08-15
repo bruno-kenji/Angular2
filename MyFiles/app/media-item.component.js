@@ -1,4 +1,4 @@
-System.register(['angular2/core', './media-item.component'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,33 +10,30 @@ System.register(['angular2/core', './media-item.component'], function(exports_1,
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, media_item_component_1;
-    var AppComponent;
+    var core_1;
+    var MediaItemComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (media_item_component_1_1) {
-                media_item_component_1 = media_item_component_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            MediaItemComponent = (function () {
+                function MediaItemComponent() {
                 }
-                AppComponent = __decorate([
+                MediaItemComponent = __decorate([
                     core_1.Component({
-                        selector: 'media-tracker-app',
-                        directives: [media_item_component_1.MediaItemComponent],
-                        templateUrl: 'app/app.component.html',
-                        styleUrls: ['app/app.component.css']
+                        selector: 'media-item',
+                        directives: [MediaItemComponent],
+                        templateUrl: 'app/media-item.component.html',
+                        styleUrls: ['app/media-item.component.css']
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], MediaItemComponent);
+                return MediaItemComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("MediaItemComponent", MediaItemComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=media-item.component.js.map
