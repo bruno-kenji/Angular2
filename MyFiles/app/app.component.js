@@ -24,7 +24,8 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'media-tracker-app',
-                        templateUrl: 'app/app.component.html'
+                        templateUrl: 'app/app.component.html',
+                        styles: ["\n      h1 {\n        color: #fff\n      }\n    "]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
