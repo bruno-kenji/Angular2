@@ -10,6 +10,9 @@ System.register(['angular2/core', 'angular2/common', './media-item.service'], fu
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
+    var __param = (this && this.__param) || function (paramIndex, decorator) {
+        return function (target, key) { decorator(target, key, paramIndex); }
+    };
     var core_1, common_1, media_item_service_1;
     var MediaItemFormComponent;
     return {
@@ -25,9 +28,10 @@ System.register(['angular2/core', 'angular2/common', './media-item.service'], fu
             }],
         execute: function() {
             MediaItemFormComponent = (function () {
-                function MediaItemFormComponent(formBuilder, mediaItemService) {
+                function MediaItemFormComponent(formBuilder, mediaItemService, lookupLists) {
                     this.formBuilder = formBuilder;
                     this.mediaItemService = mediaItemService;
+                    this.lookupLists = lookupLists;
                 }
                 MediaItemFormComponent.prototype.ngOnInit = function () {
                     this.mediaItemForm = this.formBuilder.group({
@@ -58,8 +62,9 @@ System.register(['angular2/core', 'angular2/common', './media-item.service'], fu
                         selector: 'media-item-form',
                         templateUrl: 'app/media-item-form.component.html',
                         styleUrls: ['app/media-item-form.component.css']
-                    }), 
-                    __metadata('design:paramtypes', [common_1.FormBuilder, media_item_service_1.MediaItemService])
+                    }),
+                    __param(2, core_1.Inject('LOOKUP_LISTS')), 
+                    __metadata('design:paramtypes', [common_1.FormBuilder, media_item_service_1.MediaItemService, Object])
                 ], MediaItemFormComponent);
                 return MediaItemFormComponent;
             }());
