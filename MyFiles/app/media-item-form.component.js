@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/common'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/common', './media-item.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/common'], function(exports_1, contex
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, common_1;
+    var core_1, common_1, media_item_service_1;
     var MediaItemFormComponent;
     return {
         setters:[
@@ -19,11 +19,15 @@ System.register(['angular2/core', 'angular2/common'], function(exports_1, contex
             },
             function (common_1_1) {
                 common_1 = common_1_1;
+            },
+            function (media_item_service_1_1) {
+                media_item_service_1 = media_item_service_1_1;
             }],
         execute: function() {
             MediaItemFormComponent = (function () {
-                function MediaItemFormComponent(formBuilder) {
+                function MediaItemFormComponent(formBuilder, mediaItemService) {
                     this.formBuilder = formBuilder;
+                    this.mediaItemService = mediaItemService;
                 }
                 MediaItemFormComponent.prototype.ngOnInit = function () {
                     this.mediaItemForm = this.formBuilder.group({
@@ -47,7 +51,7 @@ System.register(['angular2/core', 'angular2/common'], function(exports_1, contex
                     return { 'year': { 'min': minYear, 'max': maxYear } };
                 };
                 MediaItemFormComponent.prototype.onSubmit = function (mediaItem) {
-                    console.log(mediaItem);
+                    this.mediaItemService.add(mediaItem);
                 };
                 MediaItemFormComponent = __decorate([
                     core_1.Component({
@@ -55,7 +59,7 @@ System.register(['angular2/core', 'angular2/common'], function(exports_1, contex
                         templateUrl: 'app/media-item-form.component.html',
                         styleUrls: ['app/media-item-form.component.css']
                     }), 
-                    __metadata('design:paramtypes', [common_1.FormBuilder])
+                    __metadata('design:paramtypes', [common_1.FormBuilder, media_item_service_1.MediaItemService])
                 ], MediaItemFormComponent);
                 return MediaItemFormComponent;
             }());

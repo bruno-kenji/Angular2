@@ -1,5 +1,6 @@
 import {Component} from 'angular2/core';
 import {Control, Validators, FormBuilder} from 'angular2/common';
+import {MediaItemService} from './media-item.service';
 
 @Component({
     selector: 'media-item-form',
@@ -10,7 +11,8 @@ import {Control, Validators, FormBuilder} from 'angular2/common';
 export class MediaItemFormComponent {
   mediaItemForm;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder,
+              private mediaItemService: MediaItemService) {}
 
   ngOnInit() {
     this.mediaItemForm = this.formBuilder.group({
@@ -34,6 +36,6 @@ export class MediaItemFormComponent {
   }
 
   onSubmit(mediaItem) {
-    console.log(mediaItem);
+    this.mediaItemService.add(mediaItem);
   }
 }
