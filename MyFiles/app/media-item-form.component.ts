@@ -13,7 +13,10 @@ export class MediaItemFormComponent {
   ngOnInit() {
     this.mediaItemForm = new ControlGroup({
       'medium': new Control('Movies'),
-      'name': new Control('', Validators.pattern('[\\w\\-\\s\\/]+')),
+      'name': new Control('', Validators.compose([
+        Validators.required,
+        Validators.pattern('[\\w\\-\\s\\/]+')
+        ])),
       'category': new Control(''),
       'year': new Control('')
     });
