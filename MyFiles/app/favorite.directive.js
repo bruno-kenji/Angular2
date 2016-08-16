@@ -22,7 +22,14 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             FavoriteDirective = (function () {
                 function FavoriteDirective() {
                     this.isFavorite = true;
+                    this.hovering = false;
                 }
+                FavoriteDirective.prototype.onMouseEnter = function () {
+                    this.hovering = true;
+                };
+                FavoriteDirective.prototype.onMouseLeave = function () {
+                    this.hovering = false;
+                };
                 Object.defineProperty(FavoriteDirective.prototype, "mwFavorite", {
                     set: function (value) {
                         this.isFavorite = value;
@@ -35,6 +42,22 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     core_1.HostBinding('class.is-favorite'), 
                     __metadata('design:type', Object)
                 ], FavoriteDirective.prototype, "isFavorite", void 0);
+                __decorate([
+                    core_1.HostBinding('class.is-favorite-hovering'), 
+                    __metadata('design:type', Object)
+                ], FavoriteDirective.prototype, "hovering", void 0);
+                __decorate([
+                    core_1.HostListener('mouseenter'), 
+                    __metadata('design:type', Function), 
+                    __metadata('design:paramtypes', []), 
+                    __metadata('design:returntype', void 0)
+                ], FavoriteDirective.prototype, "onMouseEnter", null);
+                __decorate([
+                    core_1.HostListener('mouseleave'), 
+                    __metadata('design:type', Function), 
+                    __metadata('design:paramtypes', []), 
+                    __metadata('design:returntype', void 0)
+                ], FavoriteDirective.prototype, "onMouseLeave", null);
                 __decorate([
                     core_1.Input(), 
                     __metadata('design:type', Object), 
