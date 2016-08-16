@@ -22,10 +22,11 @@ System.register(['angular2/core', 'angular2/common'], function(exports_1, contex
             }],
         execute: function() {
             MediaItemFormComponent = (function () {
-                function MediaItemFormComponent() {
+                function MediaItemFormComponent(formBuilder) {
+                    this.formBuilder = formBuilder;
                 }
                 MediaItemFormComponent.prototype.ngOnInit = function () {
-                    this.mediaItemForm = new common_1.ControlGroup({
+                    this.mediaItemForm = this.formBuilder.group({
                         'medium': new common_1.Control('Movies'),
                         'name': new common_1.Control('', common_1.Validators.compose([
                             common_1.Validators.required,
@@ -54,7 +55,7 @@ System.register(['angular2/core', 'angular2/common'], function(exports_1, contex
                         templateUrl: 'app/media-item-form.component.html',
                         styleUrls: ['app/media-item-form.component.css']
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [common_1.FormBuilder])
                 ], MediaItemFormComponent);
                 return MediaItemFormComponent;
             }());
