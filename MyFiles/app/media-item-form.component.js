@@ -43,7 +43,7 @@ System.register(['angular2/core', 'angular2/common'], function(exports_1, contex
                     var maxYear = 2100;
                     if (year >= minYear && year <= maxYear)
                         return null;
-                    return { 'year': true };
+                    return { 'year': { 'min': minYear, 'max': maxYear } };
                 };
                 MediaItemFormComponent.prototype.onSubmit = function (mediaItem) {
                     console.log(mediaItem);
