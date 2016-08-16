@@ -27,7 +27,7 @@ System.register(['angular2/core', 'angular2/common'], function(exports_1, contex
                 MediaItemFormComponent.prototype.ngOnInit = function () {
                     this.mediaItemForm = new common_1.ControlGroup({
                         'medium': new common_1.Control('Movies'),
-                        'name': new common_1.Control(''),
+                        'name': new common_1.Control('', common_1.Validators.pattern('[\\w\\-\\s\\/]+')),
                         'category': new common_1.Control(''),
                         'year': new common_1.Control('')
                     });
